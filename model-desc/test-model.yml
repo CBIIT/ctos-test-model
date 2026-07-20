@@ -1,4 +1,5 @@
 Handle: test
+Version: 1.0.0
 Nodes:
   case:
     Props:
