@@ -3,6 +3,7 @@ PropDefinitions:
     Enum:
       -
         Origin: CRDC
+        Value: icdo valueset reference
         Code: CRDC0003
         Version: 3.2
   case_id:
