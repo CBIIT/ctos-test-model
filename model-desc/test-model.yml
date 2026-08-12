@@ -1,10 +1,12 @@
 Handle: test
-Version: 1.0.0
+Version: 1.1.0  # TEST #27 — proposed version bump for this expanded EDP matrix
+
 Nodes:
   case:
     Props:
       - case_id
       - patient_id
+      - cde_term_only        # TEST #22 — Term-only caDSR control (not EDP consumption)
     Term:
       - Value: Participant
         Origin: NCIT
@@ -12,23 +14,37 @@ Nodes:
       - Value: Subject
         Origin: NCIT
         Code: C48910
+
+  participant:                 # NEW NODE — hosts caDSR EDP consumer props (#1, #9, #10)
+    Props:
+      - sex_at_birth           # TEST #1  — caDSR 7572817/2.0 (P0)
+      - specimen_material      # TEST #9  — caDSR 12445832/1.00 (second caDSR EDP)
+      - race                   # TEST #10 — list-type caDSR EDP (2192199/1.00)
+
   sample:
     Props:
-      - sample_type
+      - sample_type            # TEST #23 — inline enum control (not EDP)
       - amount
+      - anatomic_site          # TEST #2  — CRDC0002/1 OBIB (~128 PVs)
+      - uberon_site            # TEST #2b — CRDC0001/1 Uberon (~12,854 PVs); all 3 CRDC EDPs
+
   file:
     Props:
       - md5sum
       - file_name
       - file_size
+
   diagnosis:
     Props:
-      - disease
+      - disease                # TEST #B0 — CRDC0003/3.2 ICD-O (existing baseline)
+      - disease_secondary      # TEST #3  — same EDP as disease (reverse-lookup)
       - date_of_dx
+
 Relationships:
   of_case:
     Props:
       - days_to_sample
+      - relationship_edp_pv    # TEST #5 — EDP on relationship property (CRDC0002/1)
     Mul: one_to_one
     Ends:
       - Src: sample
@@ -36,6 +52,7 @@ Relationships:
         Mul: many_to_one
       - Src: diagnosis
         Dst: case
+
   of_sample:
     Props: ~
     Mul: one_to_one
@@ -43,6 +60,7 @@ Relationships:
       - Src: file
         Dst: sample
         Mul: many_to_many
+
   derived_from:
     Mul: one_to_many
     Props:
