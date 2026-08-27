@@ -1,5 +1,5 @@
 Handle: test
-Version: 1.1.0  # TEST #27 — proposed version bump for this expanded EDP matrix
+Version: 1.2.0  # TEST #27 — version bump for CRDC0005 consumer (qa_test_value)
 
 Nodes:
   case:
@@ -26,7 +26,8 @@ Nodes:
       - sample_type            # TEST #23 — inline enum control (not EDP)
       - amount
       - anatomic_site          # TEST #2  — CRDC0002/1 OBIB (~128 PVs)
-      - uberon_site            # TEST #2b — CRDC0001/1 Uberon (~12,854 PVs); all 3 CRDC EDPs
+      - uberon_site            # TEST #2b — CRDC0001/1 Uberon (~12,854 PVs)
+      - qa_test_value          # CRDC0005/1 QA Test Value Set (DATATEAM-595 EDP consumer)
 
   file:
     Props:

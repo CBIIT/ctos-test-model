@@ -109,6 +109,20 @@ PropDefinitions:
     Strict: true
 
   # ---------------------------------------------------------------------------
+  # CRDC0005 consumer — QA test EDP (DATATEAM-595). New property.
+  # Verify: /model/.../sample/property/qa_test_value/terms ≈ /edp/CRDC/CRDC0005/1/terms
+  #         /edps/CRDC/CRDC0005/1/properties → qa_test_value
+  # ---------------------------------------------------------------------------
+  qa_test_value:
+    Desc: QA test EDP consumer (CRDC0005).
+    Enum:
+      - Origin: CRDC
+        Code: CRDC0005
+        Value: QA Test Value Set
+        Version: "1"
+    Strict: true
+
+  # ---------------------------------------------------------------------------
   # TEST #23 — Inline enum control. NOT EDP-backed.
   # Verify: must NOT appear on any /edps/.../properties response
   # ---------------------------------------------------------------------------
