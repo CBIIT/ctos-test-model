@@ -110,9 +110,7 @@ PropDefinitions:
 
   # ---------------------------------------------------------------------------
   # DATATEAM-708 negative — Enum typo (CRDC_0005). Real code is CRDC0005.
-  # Changelog job should stay green and emit:
   #   Missing EDP reference :: CRDC/CRDC_0005/1 ... not registered in mdb_edps.yml
-  # Verify: property may still ingest without a value-set link.
   # ---------------------------------------------------------------------------
   qa_test_value:
     Desc: DATATEAM-708 negative — Enum points at missing EDP (typo CRDC_0005).
