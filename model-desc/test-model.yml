@@ -1,5 +1,5 @@
 Handle: test
-Version: 1.2.0  # TEST #27 — version bump for CRDC0005 consumer (qa_test_value)
+Version: 1.3.0  # DATATEAM-708 — keep CRDC0005; add qa_test_missing_edp (CRDC_0006)
 
 Nodes:
   case:
@@ -28,6 +28,7 @@ Nodes:
       - anatomic_site          # TEST #2  — CRDC0002/1 OBIB (~128 PVs)
       - uberon_site            # TEST #2b — CRDC0001/1 Uberon (~12,854 PVs)
       - qa_test_value          # CRDC0005/1 QA Test Value Set (DATATEAM-595 EDP consumer)
+      - qa_test_missing_edp    # DATATEAM-708 — Enum typo CRDC_0006 (not in mdb_edps.yml)
 
   file:
     Props:
