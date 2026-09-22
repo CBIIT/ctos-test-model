@@ -109,15 +109,16 @@ PropDefinitions:
     Strict: true
 
   # ---------------------------------------------------------------------------
-  # CRDC0005 consumer — QA test EDP (DATATEAM-595). New property.
-  # Verify: /model/.../sample/property/qa_test_value/terms ≈ /edp/CRDC/CRDC0005/1/terms
-  #         /edps/CRDC/CRDC0005/1/properties → qa_test_value
+  # DATATEAM-708 negative — Enum typo (CRDC_0005). Real code is CRDC0005.
+  # Changelog job should stay green and emit:
+  #   Missing EDP reference :: CRDC/CRDC_0005/1 ... not registered in mdb_edps.yml
+  # Verify: property may still ingest without a value-set link.
   # ---------------------------------------------------------------------------
   qa_test_value:
-    Desc: QA test EDP consumer (CRDC0005).
+    Desc: DATATEAM-708 negative — Enum points at missing EDP (typo CRDC_0005).
     Enum:
       - Origin: CRDC
-        Code: CRDC0005
+        Code: CRDC_0005
         Value: QA Test Value Set
         Version: "1"
     Strict: true
