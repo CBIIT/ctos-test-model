@@ -1,5 +1,5 @@
 Handle: test
-Version: 1.3.0  # DATATEAM-708 — keep CRDC0005; add qa_test_missing_edp (CRDC_0006)
+Version: 1.4.0  # DATATEAM-708 retest — keep qa_test_missing_edp (CRDC_0006); no new CDE
 
 Nodes:
   case:
