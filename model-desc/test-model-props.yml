@@ -109,9 +109,9 @@ PropDefinitions:
     Strict: true
 
   # ---------------------------------------------------------------------------
-  # CRDC0005 consumer — QA test EDP (DATATEAM-595). Keep as-is for happy path.
-  # Verify: /model/.../sample/property/qa_test_value/terms ≈ /edp/CRDC/CRDC0005/1/terms
-  #         /edps/CRDC/CRDC0005/1/properties → qa_test_value
+  # CRDC0005 consumer — QA test EDP (DATATEAM-724).
+  # Verify: /model/.../sample/property/qa_test_value/terms ≈ /edp/CRDC/CRDC0005/2/terms
+  #         /edps/CRDC/CRDC0005/2/properties → qa_test_value
   # ---------------------------------------------------------------------------
   qa_test_value:
     Desc: QA test EDP consumer (CRDC0005).
@@ -119,7 +119,7 @@ PropDefinitions:
       - Origin: CRDC
         Code: CRDC0005
         Value: QA Test Value Set
-        Version: "1"
+        Version: "2"
     Strict: true
 
   # ---------------------------------------------------------------------------
