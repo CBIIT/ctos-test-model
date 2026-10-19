@@ -109,16 +109,48 @@ PropDefinitions:
     Strict: true
 
   # ---------------------------------------------------------------------------
-  # CRDC0005 consumer — QA test EDP (DATATEAM-595). Keep as-is for happy path.
-  # Verify: /model/.../sample/property/qa_test_value/terms ≈ /edp/CRDC/CRDC0005/1/terms
-  #         /edps/CRDC/CRDC0005/1/properties → qa_test_value
+  # CRDC0005 consumers — QA test EDP (DATATEAM-595 / 724). Multi-version on TEST 1.5.0.
+  # Verify: property /terms ≈ matching /edp/CRDC/CRDC0005/{ver}/terms
+  #         /edps/CRDC/CRDC0005/{ver}/properties lists the matching property handle
   # ---------------------------------------------------------------------------
   qa_test_value:
-    Desc: QA test EDP consumer (CRDC0005).
+    Desc: QA test EDP consumer (CRDC0005 v1).
     Enum:
       - Origin: CRDC
         Code: CRDC0005
         Value: QA Test Value Set
+        Version: "1"
+    Strict: true
+
+  qa_test_value_v2:
+    Desc: QA test EDP consumer (CRDC0005 v2 — includes gamma).
+    Enum:
+      - Origin: CRDC
+        Code: CRDC0005
+        Value: QA Test Value Set
+        Version: "2"
+    Strict: true
+
+  qa_test_value_v3:
+    Desc: QA test EDP consumer (CRDC0005 v3 — includes delta).
+    Enum:
+      - Origin: CRDC
+        Code: CRDC0005
+        Value: QA Test Value Set
+        Version: "3"
+    Strict: true
+
+  # ---------------------------------------------------------------------------
+  # CRDC0007 consumer — auto-register smoke EDP (DATATEAM-760).
+  # Verify: /model/.../sample/property/qa_auto_reg_value/terms ≈ /edp/CRDC/CRDC0007/1/terms
+  #         /edps/CRDC/CRDC0007/1/properties → qa_auto_reg_value
+  # ---------------------------------------------------------------------------
+  qa_auto_reg_value:
+    Desc: QA auto-register EDP consumer (CRDC0007 v1).
+    Enum:
+      - Origin: CRDC
+        Code: CRDC0007
+        Value: QA EDP Auto Register Test
         Version: "1"
     Strict: true
 

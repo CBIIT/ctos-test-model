@@ -1,5 +1,5 @@
 Handle: test
-Version: 1.4.0  # DATATEAM-708 retest — keep qa_test_missing_edp (CRDC_0006); no new CDE
+Version: 1.5.0  # DATATEAM-724/760 — CRDC0005 v1/v2/v3 + CRDC0007 v1 EDP consumers on sample
 
 Nodes:
   case:
@@ -28,6 +28,9 @@ Nodes:
       - anatomic_site          # TEST #2  — CRDC0002/1 OBIB (~128 PVs)
       - uberon_site            # TEST #2b — CRDC0001/1 Uberon (~12,854 PVs)
       - qa_test_value          # CRDC0005/1 QA Test Value Set (DATATEAM-595 EDP consumer)
+      - qa_test_value_v2       # CRDC0005/2 (gamma; 3 PVs)
+      - qa_test_value_v3       # CRDC0005/3 (delta; 4 PVs)
+      - qa_auto_reg_value      # CRDC0007/1 auto-register smoke EDP (2 PVs)
       - qa_test_missing_edp    # DATATEAM-708 — Enum typo CRDC_0006 (not in mdb_edps.yml)
 
   file:
