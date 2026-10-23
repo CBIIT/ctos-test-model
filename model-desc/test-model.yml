@@ -1,5 +1,5 @@
 Handle: test
-Version: 1.5.0  # DATATEAM-724/760 — CRDC0005 v1/v2/v3 + CRDC0007 v1 EDP consumers on sample
+Version: 1.6.0  # DATATEAM-789/505 — CRDC0099 v1 EDP consumer on sample (after 0099 auto-register)
 
 Nodes:
   case:
@@ -31,6 +31,7 @@ Nodes:
       - qa_test_value_v2       # CRDC0005/2 (gamma; 3 PVs)
       - qa_test_value_v3       # CRDC0005/3 (delta; 4 PVs)
       - qa_auto_reg_value      # CRDC0007/1 auto-register smoke EDP (2 PVs)
+      - qa_dedupe_value        # CRDC0099/1 DATATEAM-789 value_set reuse consumer (2 PVs)
       - qa_test_missing_edp    # DATATEAM-708 — Enum typo CRDC_0006 (not in mdb_edps.yml)
 
   file:
