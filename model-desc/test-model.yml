@@ -1,5 +1,5 @@
 Handle: test
-Version: 1.6.0  # DATATEAM-789/505 — CRDC0099 v1 EDP consumer on sample (after 0099 auto-register)
+Version: 1.7.0  # DATATEAM-507 — same annotations as 1.6.0; verify concept_hash reuse on ingest
 
 Nodes:
   case:
